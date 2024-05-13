@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import net.ezra.R
+import net.ezra.navigation.ROUTE_ABOUT
 import net.ezra.navigation.ROUTE_ADD_STUDENTS
 import net.ezra.navigation.ROUTE_EVENING
 import net.ezra.navigation.ROUTE_HOME
@@ -110,7 +111,7 @@ fun ProfileScreen(navController: NavHostController) {
 
                 Image(
                     painter = painterResource(id = R.drawable.img_2), contentDescription = "",
-                    contentScale = ContentScale.FillBounds,
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxSize()
                 )
@@ -185,7 +186,9 @@ fun ProfileScreen(navController: NavHostController) {
                             fontSize = 20.sp,
                             modifier = Modifier
                                 .clickable {
-
+                                    navController.navigate(ROUTE_ABOUT) {
+                                        popUpTo(ROUTE_PROFILE) { inclusive = true }
+                                    }
                                 })
 
                     }

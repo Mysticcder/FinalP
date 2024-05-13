@@ -68,6 +68,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import net.ezra.R
+import net.ezra.navigation.ROUTE_ADD_STUDENTS
+import net.ezra.navigation.ROUTE_CONTACT
 import net.ezra.navigation.ROUTE_HOME
 import net.ezra.navigation.ROUTE_JUMP
 import net.ezra.navigation.ROUTE_MIT
@@ -205,7 +207,10 @@ fun MitScreen(navController: NavHostController) {
 
                         Card(
                             modifier = Modifier
-                                .size(width = 500.dp, height = 98.dp),
+                                .size(width = 500.dp, height = 98.dp)
+                                .clickable {   navController.navigate(ROUTE_ADD_STUDENTS) {
+                                    popUpTo(ROUTE_MIT) { inclusive = true }
+                                } },
 
                             ) {
                             Row(
@@ -758,7 +763,7 @@ fun formatTime(time: Int): String {
 fun BottomBar(navController: NavHostController) {
     Button(
         onClick = {
-            navController.navigate(ROUTE_JUMP) {
+            navController.navigate(ROUTE_ADD_STUDENTS) {
                 popUpTo(ROUTE_HOME) { inclusive = true }
             }
         },

@@ -138,6 +138,7 @@ fun ShopScreen(navController: NavHostController) {
                             modifier = Modifier.matchParentSize()
                         )
                         Row(
+
 //                                    modifier = Modifier
 //                                        .fillMaxWidth(),
                             horizontalArrangement = Arrangement.End,

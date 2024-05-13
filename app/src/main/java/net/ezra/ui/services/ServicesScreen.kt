@@ -184,7 +184,7 @@ fun ServicesScreen(navController: NavHostController) {
 
                             Button(
                                 onClick = {
-                                    navController.navigate(ROUTE_ABOUT) {
+                                    navController.navigate(ROUTE_CONTACT) {
                                         popUpTo(ROUTE_HOME) { inclusive = true }
                                     }
                                 },
@@ -333,7 +333,7 @@ fun ServicesScreen(navController: NavHostController) {
                                     horizontalArrangement = Arrangement.End,
                                     verticalAlignment = Alignment.Bottom
                                 ){
-                                    Text(text = "LOWER BODY CHALLENGE", color = Color.White,
+                                    Text(text = "LOWER BODY CHALLENGEcc", color = Color.White,
                                         fontSize = 25.sp)
                                     Spacer(modifier = Modifier.height(6.dp))
 

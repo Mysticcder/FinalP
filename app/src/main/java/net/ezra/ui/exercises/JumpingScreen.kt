@@ -91,10 +91,10 @@ fun JumpingJackButton(
 ) {
     Button(
         onClick = { onJump() },
-        modifier = modifier.background(Color.Blue, shape),
+        modifier = modifier.background(Color.Transparent, shape),
         colors = ButtonDefaults.buttonColors(
-            backgroundColor = Color.Blue,
-            contentColor = Color.White
+            backgroundColor = Color.Transparent,
+             contentColor = Color.White
         ),
         shape = shape,
         elevation = elevation,

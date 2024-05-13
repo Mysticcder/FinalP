@@ -56,7 +56,7 @@ fun HomeScreen(navController: NavHostController) {
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .padding(10.dp)
-                        .size(height = 550.dp, width = 500.dp)
+                        .size(height = 600.dp, width = 500.dp)
 
                     )
 

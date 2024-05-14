@@ -68,10 +68,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import net.ezra.R
+import net.ezra.navigation.ROUTE_ABOUT
 import net.ezra.navigation.ROUTE_ADD_STUDENTS
 import net.ezra.navigation.ROUTE_CONTACT
 import net.ezra.navigation.ROUTE_HOME
-import net.ezra.navigation.ROUTE_JUMP
+import net.ezra.navigation.ROUTE_JUMPINGJACKSCREEN
 import net.ezra.navigation.ROUTE_MIT
 import net.ezra.navigation.ROUTE_PROFILE
 import net.ezra.navigation.ROUTE_SERVICES
@@ -146,7 +147,7 @@ fun MitScreen(navController: NavHostController) {
 
                         Card(
                             modifier = Modifier
-                                .clickable {   navController.navigate(ROUTE_JUMP) {
+                                .clickable {   navController.navigate(ROUTE_JUMPINGJACKSCREEN) {
                                     popUpTo(ROUTE_MIT) { inclusive = true }
                                 } }
                                 .size(width = 500.dp, height = 98.dp),
@@ -262,7 +263,7 @@ fun MitScreen(navController: NavHostController) {
 
 
                                 Image(
-                                    painter = painterResource(id = R.drawable.img_9),
+                                    painter = painterResource(id = R.drawable.img_41),
                                     contentDescription = "",
                                     contentScale = ContentScale.FillBounds,
                                     modifier = Modifier
@@ -345,7 +346,7 @@ fun MitScreen(navController: NavHostController) {
 
 
                                 Image(
-                                    painter = painterResource(id = R.drawable.img_9),
+                                    painter = painterResource(id = R.drawable.img_40),
                                     contentDescription = "",
                                     contentScale = ContentScale.FillBounds,
                                     modifier = Modifier
@@ -364,7 +365,7 @@ fun MitScreen(navController: NavHostController) {
 
                                         )
                                     Spacer(modifier = Modifier.height(6.dp))
-                                    Text(text = "x20")
+                                    Text(text = "x15")
                                 }
                             }
 
@@ -406,7 +407,7 @@ fun MitScreen(navController: NavHostController) {
 
                                         )
                                     Spacer(modifier = Modifier.height(6.dp))
-                                    Text(text = "x20")
+                                    Text(text = "x12")
                                 }
                             }
 
@@ -491,7 +492,7 @@ fun MitScreen(navController: NavHostController) {
 
                                         )
                                     Spacer(modifier = Modifier.height(6.dp))
-                                    Text(text = "x16")
+                                    Text(text = "x10")
                                 }
                             }
 
@@ -534,7 +535,7 @@ fun MitScreen(navController: NavHostController) {
 
                                         )
                                     Spacer(modifier = Modifier.height(6.dp))
-                                    Text(text = "x16")
+                                    Text(text = "x10")
                                 }
                             }
 
@@ -576,7 +577,7 @@ fun MitScreen(navController: NavHostController) {
 
                                         )
                                     Spacer(modifier = Modifier.height(6.dp))
-                                    Text(text = "x16")
+                                    Text(text = "x12")
                                 }
                             }
 
@@ -763,12 +764,12 @@ fun formatTime(time: Int): String {
 fun BottomBar(navController: NavHostController) {
     Button(
         onClick = {
-            navController.navigate(ROUTE_ADD_STUDENTS) {
+            navController.navigate(ROUTE_JUMPINGJACKSCREEN) {
                 popUpTo(ROUTE_HOME) { inclusive = true }
             }
         },
         modifier = Modifier
-            .padding(20.dp)
+            .padding(5.dp)
             .fillMaxWidth(),
 //            .align(alignment = Alignment.CenterHorizontally),
         colors = ButtonDefaults.buttonColors(Color.Blue)

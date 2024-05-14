@@ -103,7 +103,7 @@ fun ServicesScreen(navController: NavHostController) {
                                 .background(Color.DarkGray)
                                 .size(width = 500.dp, height = 98.dp),
                                 onClick = {
-                                navController.navigate(ROUTE_ABOUT) {
+                                navController.navigate(ROUTE_SERVICES) {
                                     popUpTo(ROUTE_HOME) { inclusive = true }
                                 }
                             }) {
@@ -254,7 +254,7 @@ fun ServicesScreen(navController: NavHostController) {
                     ) {
                         Card(
                             modifier = Modifier
-                                .size(width = 350.dp , height = 250.dp)
+                                .size(width = 350.dp, height = 250.dp)
                                 .fillMaxWidth()
                                 .padding(top = 6.dp)
                                 .clickable {
@@ -286,8 +286,8 @@ fun ServicesScreen(navController: NavHostController) {
                                     verticalAlignment = Alignment.Bottom
                                 ){
                                     Text(text = "FULL BODY CHALLENGE",style = TextStyle(
-                                                color = Color.White,
-                                        fontSize = 40.sp,
+                                                color = Color.Black,
+                                        fontSize = 35.sp,
                                         fontFamily = FontFamily.Serif,
                                         fontWeight = FontWeight.Bold,
                                         fontStyle = FontStyle.Normal,
@@ -296,6 +296,13 @@ fun ServicesScreen(navController: NavHostController) {
                                         textDecoration = TextDecoration.None
                                     )
                                     )
+
+                                    Button(onClick = { /*TODO*/ }) {
+                                        Text(text = "Start", fontSize = 29.sp,
+                                            color = Color.White,
+                                            )
+
+                                    }
 
                                     Spacer(modifier = Modifier.height(6.dp))
 
@@ -311,7 +318,7 @@ fun ServicesScreen(navController: NavHostController) {
 
                         Card(
                             modifier = Modifier
-                                .size(width = 350.dp , height = 250.dp)
+                                .size(width = 350.dp, height = 250.dp)
                                 .fillMaxWidth()
                                 .padding(top = 6.dp)
                                 .wrapContentHeight(align = Alignment.Top),
@@ -333,8 +340,17 @@ fun ServicesScreen(navController: NavHostController) {
                                     horizontalArrangement = Arrangement.End,
                                     verticalAlignment = Alignment.Bottom
                                 ){
-                                    Text(text = "LOWER BODY CHALLENGEcc", color = Color.White,
-                                        fontSize = 25.sp)
+                                    Text(text = "LOWER BODY CHALLENGE",style = TextStyle(
+                                        color = Color.Black,
+                                        fontSize = 35.sp,
+                                        fontFamily = FontFamily.Serif,
+                                        fontWeight = FontWeight.Bold,
+                                        fontStyle = FontStyle.Normal,
+                                        letterSpacing = 0.1.em,
+                                        background = Color.Transparent,
+                                        textDecoration = TextDecoration.None
+                                    )
+                                    )
                                     Spacer(modifier = Modifier.height(6.dp))
 
 
@@ -363,24 +379,24 @@ fun SottomBar(navController: NavHostController) {
     val selectedIndex = remember { mutableStateOf(0) }
     BottomNavigation(elevation = 10.dp, backgroundColor = Color.Black) {
         BottomNavigationItem(icon = {
-            Icon(imageVector = Icons.Default.Home,"")
+            Icon(imageVector = Icons.Default.Home,"", tint = Color.White)
         },
-            label = { Text(text = "Home") }, selected = (selectedIndex.value == 0),
+            label = { Text(text = "Home", color = Color.White) }, selected = (selectedIndex.value == 0),
             onClick = {
                 navController.navigate(ROUTE_HOME) {
                     popUpTo(ROUTE_HOME) { inclusive = true }
                 }
             })
         BottomNavigationItem(icon = {
-            Icon(imageVector = Icons.Default.Favorite,"")
+            Icon(imageVector = Icons.Default.Favorite,"", tint = Color.White)
         },
-            label = { Text(text = "Favorite") }, selected = (selectedIndex.value == 1), onClick = {
+            label = { Text(text = "Favorite",color = Color.White) }, selected = (selectedIndex.value == 1), onClick = {
                 selectedIndex.value = 1
             })
         BottomNavigationItem(icon = {
-            Icon(imageVector = Icons.Default.Person, "")
+            Icon(imageVector = Icons.Default.Person, "", tint = Color.White)
         },
-            label = { Text(text = "Profile") }, selected = (selectedIndex.value == 2),
+            label = { Text(text = "Profile", color= Color.White) }, selected = (selectedIndex.value == 2),
             onClick = {
                 navController.navigate(ROUTE_SIGNUP) {
                     popUpTo(ROUTE_HOME) { inclusive = true }

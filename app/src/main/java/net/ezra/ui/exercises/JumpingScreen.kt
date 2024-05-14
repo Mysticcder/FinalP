@@ -59,12 +59,6 @@ fun JumpingJackScreen(navController: NavHostController) {
                 style = MaterialTheme.typography.h4
             )
 
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Text(
-                text = "Jump count: $jumpCount",
-                style = MaterialTheme.typography.body1
-            )
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -91,7 +85,7 @@ fun JumpingJackButton(
 ) {
     Button(
         onClick = { onJump() },
-        modifier = modifier.background(Color.Transparent, shape),
+        modifier = modifier.background(Color.Transparent),
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.Transparent,
              contentColor = Color.White
@@ -119,7 +113,7 @@ fun PreviewLight() {
 
 @Composable
 fun TimerApp() {
-    var time by remember { mutableStateOf(20) }
+    var time by remember { mutableStateOf(-20) }
     var isRunning by remember { mutableStateOf(false) }
     var job by remember { mutableStateOf<Job?>(null) }
 

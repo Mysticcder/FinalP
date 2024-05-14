@@ -14,7 +14,7 @@ const val ROUTE_ADD_STUDENTS = "add_students"
 const val ROUTE_SPLASH = "splash"
 const val ROUTE_VIEW = "splash"
 const val ROUTE_UPLOAD = "splash"
-const val ROUTE_JUMP = "splash"
+const val ROUTE_JUMPINGJACKSCREEN = "splash"
 
 
 

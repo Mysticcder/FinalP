@@ -161,7 +161,7 @@ fun ProfileScreen(navController: NavHostController) {
 
                         Spacer(modifier = Modifier.width(20.dp))
 
-                        Text(text = "Workout Settings",
+                        Text(text = "General Settings",
                             color = Color.Black,
                             fontSize = 20.sp,
                             modifier = Modifier
@@ -181,7 +181,7 @@ fun ProfileScreen(navController: NavHostController) {
 
                         Spacer(modifier = Modifier.width(20.dp))
 
-                        Text(text = "General Settings",
+                        Text(text = "Workout Settings",
                             color = Color.Black,
                             fontSize = 20.sp,
                             modifier = Modifier

@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import net.ezra.ui.About.SettingsScreen
 import net.ezra.ui.Products.ProfileScreen
 import net.ezra.ui.SplashScreen
 
@@ -77,11 +78,11 @@ fun AppNavHost(
         }
 
         composable(ROUTE_PROFILE) {
-           ProfileScreen(navController)
+           ProfileScreen(navController = navController)
         }
 
         composable(ROUTE_EVENING) {
-            ProfileScreen(navController)
+            SettingsScreen( navController = navController)
         }
 
         composable(ROUTE_SPLASH) {
@@ -96,8 +97,8 @@ fun AppNavHost(
 //            VideoUploadScreen(navController)
 //        }
 
-//        composable(ROUTE_JUMP) {
-//           JumpingJackScreen(navController)
+//        composable(ROUTE_JUMPINGJACKSCREEN) {
+//           JumpingJackScreen(navController = navController)
 //        }
 
 

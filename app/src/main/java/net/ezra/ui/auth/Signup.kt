@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
+import net.ezra.navigation.ROUTE_LOGIN
 import net.ezra.navigation.ROUTE_PROFILE
 import net.ezra.navigation.ROUTE_SIGNUP
 

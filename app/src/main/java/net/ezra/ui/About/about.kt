@@ -5,13 +5,17 @@ import android.annotation.SuppressLint
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import net.ezra.navigation.ROUTE_PROFILE
 import net.ezra.ui.services.ServicesScreen
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -23,7 +27,23 @@ fun SettingsScreen(navController: NavHostController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Settings") }
+                title = { Text(text = "Settings") },
+
+                        navigationIcon = {
+
+                    IconButton(onClick = {
+                        navController.navigate(net.ezra.navigation.ROUTE_PROFILE) {
+                            popUpTo(ROUTE_PROFILE) { inclusive = true }
+                        }
+                    }) {
+                        androidx.compose.material3.Icon(
+                            Icons.Filled.ArrowBack, "backIcon",
+                            tint = Color.Black
+                        )
+
+
+                    }
+                }
             )
         },
         content = {
